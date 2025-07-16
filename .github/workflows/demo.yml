@@ -1,19 +1,16 @@
-name: Hello World Workflow
+name: My Workflow
 
 on:
   push:
-    branches:
-      - main
+    branches: [ master ]
 
 jobs:
-  say-hello:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Say Hello
-        run: echo "🚀 Hello from Varad's first GitHub Action!"
-
-        
-        
+      - name: Print Hello
+        run: echo "Hello, Varad! 🚀"
